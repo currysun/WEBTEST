@@ -1,7 +1,7 @@
 package CZ07;
 
 class animal{
-	 String name="dog";
+	String name="dog";
 	String color;
 	
 	public void eat(){

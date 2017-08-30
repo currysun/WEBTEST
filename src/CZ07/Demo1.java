@@ -10,7 +10,7 @@ class Baby{
 	public Baby(int i,String n){
 		id=i;
 		name=n;
-		System.out.println("construct function is working");
+		System.out.println("2 para construct function is working");
 	}
 	
 	public Baby(){
@@ -23,7 +23,7 @@ public class Demo1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Baby b=new Baby(310110, "curry");
-		System.out.println(b.id+" = bay id"+b.name+" = baby name");
+		System.out.println(b.id+" = bay id "+b.name+" = baby name");
 		new Baby();
 	}
 
