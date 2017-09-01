@@ -1,0 +1,24 @@
+#!/bin/bash
+export ORACLE_SID=ora11g
+#USERNAME=`basename $0`
+echo "PLEASE INPUT BACKUP USER NAME:"
+read USERNAME
+export USERNAME
+#export LOGFILE=$USERNAME.LOG
+export DUMPFILE=$USERNAME.dmp
+#export $ORACLE_HOME=/oracle/product/10.2.0/db_1
+export DIRECTORY=/home/oracle/backup
+export LOGFILE=$USERNAME.log
+echo $LOGFILE
+
+$ORACLE_HOME/bin/sqlplus /nolog <<EOF
+ 
+  connect / as sysdba
+
+  CREATE OR REPLACE DIRECTORY EXPORT AS '$DIRECTORY';
+
+  GRANT READ, WRITE ON DIRECTORY  EXPORT TO SYSTEM;
+  GRANT READ, WRITE ON DIRECTORY  EXPORT TO SYSMAN;
+ 
+EOF
+expdp userid=system/0racle1 dumpfile=$DUMPFILE schemas=$USERNAME content=all directory=EXPORT logfile=$USERNAME.log
