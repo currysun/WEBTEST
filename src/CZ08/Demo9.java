@@ -1,34 +1,51 @@
 package CZ08;
 /*
- * super 关键字代表父类空间的引用
- * 
- * super 关键字作用：
- * 1.子父类存在同名的成员时，在子类中默认是访问子类的成员，可以通过super指定访问父类的成员。
- * 2.创建子类对象时，默认会先调用父类无参的构造方法，可以通过super关键字指定调用父类的构造方法。
+ * 使用java描述一下普通的学生、java 基础班的学生、java就业班的学生
+ * 所有的学生都会学习。但是学习内容不一样
+ * 普通的学生：马克思
+ * 基础班：javase
+ * 就业班学生：javaee+android
  */
-class fu{
-	int x=10;
+
+class StudentA{
 	String name;
-	public fu(String name){
+	public StudentA(String name) {
 		this.name=name;
-		System.out.println("Fu 类带参的构造方法");
+	}
+	public void Study() {
+		System.out.println("普通学生 "+name+"学马克思");
 	}
 }
-class zi extends fu{
-	int x=20;
-	
-	public zi(String name){
+
+class StudentJavaSe extends StudentA{
+	public StudentJavaSe(String name) {
 		super(name);
 	}
-	public void print(){
-		System.out.print("x = "+super.x);
+	public void Study() {
+		System.out.println("java基础班学生"+name+ "学se");
+	}
+}
+
+class StudentJavaEe extends StudentA{         //就业班学生 是属于基础班的一种，不合理
+	public StudentJavaEe(String name) {
+		super(name);
+	}
+	public void Study() {
+		System.out.println("java就业班学生 学ee");
 	}
 }
 
 
 public class Demo9 {
-	public static void main(String[] args){
-		zi zi= new zi("curry");
-		zi.print();;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentA a1=new StudentA("小明");
+		StudentJavaSe a2=new StudentJavaSe("小克");
+		StudentJavaEe a3=new StudentJavaEe("小类");
+		a1.Study();
+		a2.Study();
+		a3.Study();
 	}
+
 }
