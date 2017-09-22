@@ -24,7 +24,7 @@
 	<classpathentry kind="lib" path="libs/phantomjsdriver-1.2.1.jar"/>
 	<classpathentry kind="lib" path="libs/testng-6.9.9.jar"/>
 	<classpathentry kind="lib" path="selenium-java-2.53.1-srcs.jar"/>
-	<classpathentry kind="lib" path="selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="selenium-java-2.53.1.jar" sourcepath="E:/selenium-java-2.53.1-srcs.jar"/>
 	<classpathentry kind="lib" path="sqljdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

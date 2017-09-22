@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="webtest.testdriver">
+      <class name="webtest.jQueryLocator">
         <methods>
-          <include name="StartChrome"/>
+          <include name="JqueryTest"/>
         </methods>
-      </class> <!-- webtest.testdriver -->
+      </class> <!-- webtest.jQueryLocator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

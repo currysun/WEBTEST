@@ -16,6 +16,9 @@ public class Assign1 {
 		// TODO Auto-generated method stub
 		Person p1=new Person();
 		System.out.println(p1.name);
+		String code="8";
+		int i=Integer.parseInt(code)+1;
+		System.out.println(i);
 	}
 
 }
