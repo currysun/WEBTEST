@@ -29,6 +29,8 @@ class person{
 	}
 }
 
+class Dog{}
+
 public class CollectionDemo3 {
 
 	public static void main(String[] args) {
@@ -39,7 +41,13 @@ public class CollectionDemo3 {
 		System.out.println(collection.isEmpty());
 		System.out.println("存在该元素吗？"+collection.contains(new person("curry", 30)));
 		System.out.println(collection);
-
+		System.out.println("存在该元素吗？"+collection.contains(new Dog()));
+		
+		Collection c2=new ArrayList();
+		c2.add(new person("curry", 30));
+		c2.add(new person("thompson", 27));
+		
+		System.out.println("collection包含c2集合吗？"+collection.containsAll(c2));
 		
 		
 		
