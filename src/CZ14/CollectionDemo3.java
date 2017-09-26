@@ -45,7 +45,7 @@ public class CollectionDemo3 {
 		
 		Collection c2=new ArrayList();
 		c2.add(new person("curry", 30));
-		c2.add(new person("thompson", 27));
+		c2.add(new person("thompson", 28));
 		
 		System.out.println("collection°üº¬c2¼¯ºÏÂð£¿"+collection.containsAll(c2));
 		
